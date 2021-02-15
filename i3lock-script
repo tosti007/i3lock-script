@@ -1,0 +1,32 @@
+#!/bin/bash
+
+source i3lock-script-static.sh
+
+##############################
+# Files need update
+##############################
+# If no lock file is created yet
+if [ ! -f "$file_lock" ]; then
+	UPDATE_CONFIG=1
+# If the config has been changed
+elif [[ "$file_lock" -ot "$file_config" ]]; then
+	UPDATE_CONFIG=1
+else
+	##############################
+	# background image needs update
+	##############################
+	screen_background_image=$(get-value 'screen.background-image')
+	# If the background image has been changed
+	if [[ -n "$screen_background_image" && "$screen_background_image" -nt "$file_background" ]]; then
+		UPDATE_CONFIG=1
+	fi
+fi
+
+if [[ -n "$UPDATE_CONFIG" ]]; then
+	i3lock-script-update
+fi
+
+##############################
+# Do the actual locking
+##############################
+$file_lock "$@"
