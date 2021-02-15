@@ -1,6 +1,8 @@
 #!/bin/bash
 
-source i3lock-script-static.sh
+cd "$(dirname "$(realpath "$0")")"
+
+source ./i3lock-script-static.sh
 
 ##############################
 # Files need update
@@ -23,7 +25,7 @@ else
 fi
 
 if [[ -n "$UPDATE_CONFIG" ]]; then
-	i3lock-script-update
+	./i3lock-script-update
 fi
 
 ##############################

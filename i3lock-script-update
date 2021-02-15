@@ -1,6 +1,8 @@
 #!/bin/bash
 
-source i3lock-script-static.sh
+cd "$(dirname "$(realpath "$0")")"
+
+source ./i3lock-script-static.sh
 
 ##############################
 # Pywal setting
