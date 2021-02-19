@@ -19,8 +19,12 @@ else
 	##############################
 	screen_background_image=$(get-value 'screen.background-image')
 	# If the background image has been changed
-	if [[ -n "$screen_background_image" && "$screen_background_image" -nt "$file_background" ]]; then
-		UPDATE_CONFIG=1
+	if [[ -n "$screen_background_image" ]]; then
+		if [ ! -f "$file_background" ]; then
+			UPDATE_CONFIG=1
+		elif [[ "$screen_background_image" -nt "$file_background" ]]; then
+			UPDATE_CONFIG=1
+		fi
 	fi
 fi
 
