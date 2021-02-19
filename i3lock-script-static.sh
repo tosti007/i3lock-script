@@ -15,8 +15,6 @@ file_background="$dir_cache/background.png"
 
 color_transparent='00000000'
 
-cd "$dir_config"
-
 ##############################
 # Helper function(s)
 ##############################

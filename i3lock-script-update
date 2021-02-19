@@ -4,6 +4,8 @@ cd "$(dirname "$(realpath "$0")")"
 
 source ./i3lock-script-static.sh
 
+cd "$dir_config"
+
 ##############################
 # Pywal setting
 ##############################
