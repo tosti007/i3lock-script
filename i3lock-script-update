@@ -97,35 +97,35 @@ cat <<- EOF > "$file_lock"
 
 i3lock \\
 	--force-clock \\
-	--indpos=" x + $ring_x : h + $ring_y" \\
-	--timepos="x + $text_x : h + $time_y" \\
-	--datepos="x + $text_x : h + $date_y" \\
+	--ind-pos=" x + $ring_x : h + $ring_y" \\
+	--time-pos="x + $text_x : h + $time_y" \\
+	--date-pos="x + $text_x : h + $date_y" \\
 	--time-align 1 \\
 	--date-align 1 \\
-	--timestr='$time_format' \\
-	--datestr='$date_format' \\
-	--veriftext='' \\
-	--noinputtext='' \\
-	--wrongtext='' \\
+	--time-str='$time_format' \\
+	--date-str='$date_format' \\
+	--verif-text='' \\
+	--noinput-text='' \\
+	--wrong-text='' \\
 	--radius="$ring_radius" \\
 	--ring-width="$ring_width" \\
-	--timesize="$time_size" \\
-	--datesize="$date_size" \\
-	-c "$screen_background_color" \\
-	--datecolor="$text_color" \\
-	--timecolor="$text_color" \\
-	--verifcolor="$text_color" \\
-	--insidevercolor="$color_transparent" \\
-	--ringvercolor="$color_transparent" \\
-	--wrongcolor="$ring_color_wrong" \\
-	--insidewrongcolor="$ring_color_wrong" \\
-	--ringwrongcolor="$ring_color" \\
-	--ringcolor="$ring_color" \\
-	--insidecolor="$color_transparent" \\
-	--linecolor="$color_transparent" \\
-	--keyhlcolor="$ring_color_highlight" \\
-	--bshlcolor="$ring_color_remove" \\
-	--separatorcolor="$color_transparent" \\
+	--time-size="$time_size" \\
+	--date-size="$date_size" \\
+	--color "$screen_background_color" \\
+	--date-color="$text_color" \\
+	--time-color="$text_color" \\
+	--verif-color="$text_color" \\
+	--insidever-color="$color_transparent" \\
+	--ringver-color="$color_transparent" \\
+	--wrong-color="$ring_color_wrong" \\
+	--insidewrong-color="$ring_color_wrong" \\
+	--ringwrong-color="$ring_color" \\
+	--ring-color="$ring_color" \\
+	--inside-color="$color_transparent" \\
+	--line-color="$color_transparent" \\
+	--keyhl-color="$ring_color_highlight" \\
+	--bshl-color="$ring_color_remove" \\
+	--separator-color="$color_transparent" \\
 	--time-font="$text_font" \\
 	--date-font="$text_font" \\
 	--layout-font="$text_font" \\
